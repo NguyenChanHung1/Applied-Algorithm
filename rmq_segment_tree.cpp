@@ -1,4 +1,4 @@
-// Partial 2/4
+// Partial 2/4 O(N log N)
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -18,7 +18,7 @@ void construct_segment(int l, int r, int node=0){
     T[node] = min(T[2*node+1], T[2*node+2]);
 }
 
-int rmq(int si, int sl, int sr, int l, int r){
+int rmq(int si, int sl, int sr, int l, int r){// O(log (N/2))
     if(sl >= l && sr <= r){
         return T[si];
     }
@@ -42,7 +42,7 @@ int main(){
 
     cin >> m;
     int sum_ = 0;
-    for (int i=0; i<m; i++){
+    for (int i=0; i<m; i++){//O(M logN)
         int l,r;
         cin >> l >> r;
         if(l > r)
