@@ -4,7 +4,7 @@
 using namespace std;
 
 vector<int> A;
-int M[20][100001] = {-1}; // M[j,i] = id(from = i, length = 2^j)
+int M[20][1000001] = {-1}; // M[j,i] = id(from = i, length = 2^j)
 int n,m;
 
 void preprocess(){ // O(n logn)
